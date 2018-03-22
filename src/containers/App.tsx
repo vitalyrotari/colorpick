@@ -1,12 +1,11 @@
-import React from 'react';
-import Container from '../components/Container';
-import Tabs from '../components/Tabs';
+import * as React from 'react';
 import ColorPicker from './ColorPicker';
-import SelectedColors from './SelectedColors';
 import PredefinedColors from './PredefinedColors';
+import SelectedColors from './SelectedColors';
+import Tabs from './Tabs';
 
-const App = () => (
-  <Container>
+const App: React.SFC = () => (
+  <div className="container">
     <SelectedColors />
     <Tabs
       tabs={[
@@ -18,7 +17,7 @@ const App = () => (
         <ColorPicker/>,
       ]}
     />
-  </Container>
+  </div>
 );
 
 export default App;
